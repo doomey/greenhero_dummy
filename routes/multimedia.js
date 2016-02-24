@@ -21,7 +21,7 @@ router.get('/:multimedia_id', function(req, res, next) {
             var mimeType = mime.lookup(fileName);
 
             res.writeHead(200,{'content-type' : mimeType});
-            reader.pipe(res);
+            res.pipe(reader);
         }
     });
 });

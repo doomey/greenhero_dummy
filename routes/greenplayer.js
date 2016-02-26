@@ -21,4 +21,12 @@ router.get('/', function(req, res, next){
     });
 });
 
+router.post('/', function(req, res, next){
+    res.json({
+        "result" : {
+            "message" : "시청 완료 메시지가 들어왔습니다. 나뭇잎 적립 절차를 진행합니다."
+        }
+    });
+});
+
 module.exports = router;

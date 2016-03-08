@@ -1,7 +1,26 @@
 var express = require('express');
 var router = express.Router();
 
-router.get('/', function(req, res, next) {
+router.get('/', function(req, res, next){
+    res.json({
+        "result": {
+            "page": 1,
+            "listPerPage": 10,
+            "list": [
+                {
+                    "id": 1,
+                    "title": "오늘의 분리수거",
+                    "heart": 2,
+                    "rAmount": 4,
+                    "backgroundUrl": null,
+                    "photoUrl": "https://greenhero.s3.ap-northeast-2.amazonaws.com/photos/upload_7cf68e7fa9c88611e506e60f5995f5c8.jpg"
+                }
+            ]
+        }
+    });
+})
+
+router.get('/:id', function(req, res, next) {
     res.json({
       "result": {
         "page": 1,

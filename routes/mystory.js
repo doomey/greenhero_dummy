@@ -26,7 +26,7 @@ router.get('/', function(req, res, next){
     });
 });
 
-router.get('/:id', function(req, res, next) {
+router.get('/:ediaryId', function(req, res, next) {
     res.json(
         {
             "result" : {
@@ -70,7 +70,7 @@ router.post('/', function(req, res, next) {
     });
 });
 
-router.put('/', function(req, res, next) {
+router.put('/:ediaryId', function(req, res, next) {
     res.json({
         "result" : {
             "message" : "수정이 완료되었습니다."

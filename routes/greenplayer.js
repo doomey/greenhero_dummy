@@ -19,7 +19,7 @@ router.get('/', function(req, res, next){
     });
 });
 
-router.get('/:id', function(req, res, next){
+router.get('/:greenplayerId', function(req, res, next){
     res.json({
         "result" : {
             "page" : 1,

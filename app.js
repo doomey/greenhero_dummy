@@ -20,12 +20,12 @@ var greenplayer = require('./routes/greenplayer');
 //items 라우팅 모듈 로딩
 var items = require('./routes/items');
 //members 라우팅 모듈 로딩
-var members = require('./routes/members');
+var members = require('./routes/member');
 var orders = require('./routes/orders');
 var receipt = require('./routes/receipt');
-var photo = require('./routes/photo');
-var multimedia = require('./routes/multimedia');
+
 var mystory = require('./routes/mystory');
+var bell = require('./routes/bell');
 
 var app = express();
 
@@ -68,9 +68,8 @@ app.use('/items', items);
 app.use('/members', members);
 app.use('/orders', orders);
 app.use('/receipt', receipt);
-app.use('/photos', photo);
-app.use('/multimedias', multimedia);
 app.use('/mystories', mystory);
+app.use('/heartbells/me', bell);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

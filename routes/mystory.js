@@ -7,27 +7,29 @@ router.get('/', function(req, res, next) {
             "result" : {
                     "page" : 1,
                     "listPerPage" : 10,
-                    "iPartyId" : 3,
-                    "list" : [{
-                        "id" : 3,
-                        "title" : "재활용 합시당",
-                        "wtime" : "2015-09-01 09:32:12",
-                        "hAmount" : 2,
-                        "rAmount" : 4,
-                        "content" : "오늘 재활용 센터를 다녀왔는데...",
-                        "file" : "ec2-52-79-116-72.ap-northeast-2.compute.amazonaws.com/files/photo/image1.jpg",
-                        "backgroundId" : null
-                    }, {
-                        "id" : 4,
-                        "title" : "집에서도 환경보호",
-                        "wtime" : "2015-09-01 09:32:12",
-                        "hAmount" : 12,
-                        "rAmount" : 24,
-                        "content" : "우리집에.....",
-                        "file" : null,
-                        "backgroundId" : 3
-                    }
-
+                    "list" : [
+                        {
+                            "id" : 3,
+                            "title" : "재활용 합시당",
+                            "nickname" : "우리들은",
+                            "wtime" : "2015-09-01 09:32:12",
+                            "heart" : 2,
+                            "rAmount" : 4,
+                            "backgroundUrl" : null,
+                            "content" : "오늘 재활용 센터를 다녀왔는데...",
+                            "photoUrl" : "https://s3.ap-northeast-2.amazonaws.com/greenhero/photos/upload_74a91f9a6eea07c90d37368b9865c372.jpg"
+                        },
+                        {
+                            "id" : 4,
+                            "title" : "오늘 분리수거 팁",
+                            "nickname" : "우리들은",
+                            "wtime" : "2015-09-02 10:40:12",
+                            "heart" : 5,
+                            "rAmount" : 2,
+                            "backgroundUrl" : "https://s3.ap-northeast-2.amazonaws.com/greenhero/bg/upload_14039e1105a31d9a02838f041be681ea.jpg",
+                            "content" : "저처럼 분리수거하세요 ㅇㅇ",
+                            "photoUrl" : null
+                        }
                     ]
             }
         }
@@ -37,9 +39,9 @@ router.get('/', function(req, res, next) {
 router.post('/', function(req, res, next) {
     res.json({
             "result" : {
-            "ediaryId" : 12,
-            "message" : "쓰기가 완료되었습니다."
-        }
+                "ediaryId" : 12,
+                "message" : "쓰기가 완료되었습니다."
+            }
     });
 });
 

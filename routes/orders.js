@@ -6,12 +6,12 @@ router.post('/', function(req, res, next) {
         res.json(
             {
                 "result" : {
-                    "message" : "주문에 성공하였습니다",
+                    "message" : "주문에 성공하였습니다.",
                     "orderId" : 1,
                     "items" : [{
                         "id" : 1,
-                        "name" : "하기스",
-                        "picture" : "/photos/xxxxxxx.jpg",
+                        "name" : "슬로우 가방",
+                        "picture" : "https://s3.ap-northeast-2.amazonaws.com/greenhero/photos/upload_40b40ac4ad612402e62c3d2301e5953d.PNG",
                         "price" : 1000,
                         "quantity" : 1
                     }],
@@ -27,7 +27,8 @@ router.post('/', function(req, res, next) {
                         "phone1" : "010-1234-5678",
                         "phone2" : "011-1234-5678",
                         "adCode" : "12345",
-                        "address" : "춘천"
+                        "address" : "춘천",
+                        "care" : "조심하세요"
                     }
                 }
             }

@@ -69,7 +69,7 @@ app.use('/members', members);
 app.use('/orders', orders);
 app.use('/receipt', receipt);
 app.use('/mystories', mystory);
-app.use('/bells/me', bell);
+app.use('/bells', bell);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

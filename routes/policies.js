@@ -27,11 +27,11 @@ router.get('/', function(req, res, next){
 router.get('/:policyId', function(req, res, next){
     res.json({
         "result" : {
-            "id" : 1,
-            "type": 4,
-            "title": "운영정책",
-            "date": "2016-02-01 15:00:00",
-            "body": "본 운영정책은 가그린이 제공하는 그린히어로와 관련하여..."
+            "list" : [
+                {
+                    "body": "본 운영정책은 가그린이 제공하는 그린히어로와 관련하여..."
+                }
+            ]
         }
     });
 });

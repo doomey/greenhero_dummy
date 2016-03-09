@@ -33,11 +33,11 @@ router.get('/', function(req, res, next){
 router.get('/:faqId', function(req, res, next){
     res.json({
         "result" : {
-            "id" : 1,
-            "type": 3,
-            "title": "[FAQ] 저 차단당했는데 어떻게 해야 하나요?",
-            "date": "2016-02-01 15:00:00",
-            "body": "Q : 어떻게 해야 해요? A : 기다려봐요"
+            "list" : [
+                {
+                    "body": "Q : 어떻게 해야 해요? A : 기다려봐요"
+                }
+            ]
         }
     });
 });

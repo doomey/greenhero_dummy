@@ -20,13 +20,10 @@ router.get('/', function(req, res, next){
 router.get('/:itemsId', function(req, res, next){
     res.json({
         "result" : {
-            "id" : 1,
-            "name" : "페이셜 오일",
-            "picture" : "https://s3.ap-northeast-2.amazonaws.com/greenhero/photos/upload_62ba3b268eacefa3a944e82d959c5534.png",
-            "star" : 13,
-            "price" : 200,
-            "itemCount" : 10,
-            "itemDescription" : "피부를 촉촉하게"
+            "items" : [{
+                "itemCount" : 10,
+                "itemDescription" : "피부를 촉촉하게"
+            }]
         }
     });
 });

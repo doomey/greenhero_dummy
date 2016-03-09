@@ -20,39 +20,14 @@ router.get('/', function(req, res, next){
     });
 })
 
-router.get('/searching', function(req, res, next){
-   res.json({
-      "result": {
-         "page": 1,
-         "listPerPage": 10,
-         "list": [
-            {
-               "id": 1,
-               "title": "오늘의 분리수거",
-               "heart": 2,
-               "rAmount": 4,
-               "backgroundUrl": null,
-               "photoUrl": "https://greenhero.s3.ap-northeast-2.amazonaws.com/photos/upload_7cf68e7fa9c88611e506e60f5995f5c8.jpg"
-            }
-         ]
-      }
-   });
-})
-
 router.get('/:ediaryId', function(req, res, next) {
     res.json({
       "result": {
-        "ediary" : {
-          "id": 1,
-          "title": "오늘의 분리수거",
+        "list" : [{
           "nickname": "해봄해범",
           "wtime": "2016-01-25 08:33:12",
-          "heart": 2,
-          "rAmount": 4,
-          "backgroundUrl": null,
-          "content": "오늘은 분리수거를 하는 날이라...",
-          "photoUrl": "https://greenhero.s3.ap-northeast-2.amazonaws.com/photos/upload_7cf68e7fa9c88611e506e60f5995f5c8.jpg"
-        },
+          "content": "오늘은 분리수거를 하는 날이라..."
+        }],
 
         "newest": [
           {"id": 43, "title": "나무를 심어요", "thumbnail": "https://s3.ap-northeast-2.amazonaws.com/greenhero/photos/upload_557f487b3b111e4fb4fa3312df69adac.jpg", "backgroundUrl": null},

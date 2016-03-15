@@ -27,6 +27,8 @@ var receipt = require('./routes/receipt');
 var mystory = require('./routes/mystory');
 var bell = require('./routes/bell');
 
+var sympathy = require('./routes/sympathy');
+
 var app = express();
 
 app.set('env', 'development');
@@ -70,6 +72,7 @@ app.use('/orders', orders);
 app.use('/receipt', receipt);
 app.use('/mystories', mystory);
 app.use('/bells', bell);
+app.use('/sympathy', sympathy);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

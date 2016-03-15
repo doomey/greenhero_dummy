@@ -10,6 +10,8 @@ router.get('/', function(req, res, next) {
                 "itemsPerPage" : 2,
                 "items" : [{
                     "id" : 1,
+                    "orderId" : 123,
+                    "date" : "2016-03-15 09:29:00",
                     "name" : "슬로우 가방",
                     "picture" : "https://s3.ap-northeast-2.amazonaws.com/greenhero/photos/upload_40b40ac4ad612402e62c3d2301e5953d.PNG",
                     "price" : 1000,
@@ -17,6 +19,8 @@ router.get('/', function(req, res, next) {
                     "iPrice" : 2000
                 }, {
                     "id" : 2,
+                    "orderId" : 124,
+                    "date" : "2016-03-15 09:30:00",
                     "name" : "후레쉬 폼",
                     "picture" : "https://s3.ap-northeast-2.amazonaws.com/greenhero/photos/upload_548e3013dd8e464cbecf97f25ef2ebe7.JPG",
                     "price" : 500,

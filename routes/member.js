@@ -5,7 +5,7 @@ router.post('/login', function(req, res, next) {
     if(req.secure) {
         res.json({
             "result" : {
-                "message" : "로그인이 완료 되었습니다. 감사합니다!"
+                "message" : "해범님 환영합니다!"
             }
         });
     } else {

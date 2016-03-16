@@ -23,6 +23,7 @@ router.get('/me', function(req, res, next) {
                 "nickname" : "아재개그1인자",
                 "totalLeaf" : 50000,
                 "todayLeaf" : 45,
+                "treeUrl": "https://greenhero.s3.ap-northeast-2.amazonaws.com/photos/a5ff457a-bf4b-42b7-bf2b-be445d30ed4ftree0.png",
                 "address" : {
                     "dName" : "송병훈",
                     "dPhone1" : "010-1234-5678",
@@ -55,32 +56,28 @@ router.put('/me', function(req, res, next) {
 
 router.get('/me/leafs', function(req, res, next) {
     if(req.secure) {
-        if(err) {
-            var err = new Error('나뭇잎 사용내역을 조회할 수 없습니다...');
-            err.code = "err004";
-            res.json(err);
-        } else {
-            res.json({
-                "result" : {
-                    "page" : 1,
-                    "listPerPage" : 2,
-                    "list" : [
-                        {
-                            "leafType" : 0,
-                            "leafApplydate" : "2016-02-23",
-                            "leafChangedamount" : 1000
-                        },
-                        {
-                            "leafType" : 1,
-                            "leafApplydate" : "2016-02-23",
-                            "leafChangedamount" : 500
-                        }
-                    ]
-                }
-            });
-        }
+        res.json({
+            "result" : {
+                "page" : 1,
+                "listPerPage" : 2,
+                "list" : [
+                    {
+                        "leafType" : 0,
+                        "leafApplydate" : "2016-02-23",
+                        "leafChangedamount" : 1000
+                    },
+                    {
+                        "leafType" : 1,
+                        "leafApplydate" : "2016-02-23",
+                        "leafChangedamount" : 500
+                    }
+                ]
+            }
+        });
     } else {
-
+        var err = new Error("SSL/TLS Upgrade Required");
+        err.status = 426;
+        next(err);
     }
 });
 

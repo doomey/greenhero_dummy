@@ -118,19 +118,31 @@ router.get('/me/baskets', function(req, res, next) {
 });
 
 router.post('/me/baskets', function(req, res, next) {
-    res.json({
-        "result" : {
-            "message" : "장바구니에 물품을 추가하였습니다."
-        }
-    });
+    if(req.secure) {
+        res.json({
+            "result" : {
+                "message" : "장바구니에 물품을 추가하였습니다."
+            }
+        });
+    } else {
+        var err = new Error("SSL/TLS Upgrade Required");
+        err.status = 426;
+        next(err);
+    }
 });
 
 router.put('/me/baskets', function(req, res, next) {
-    res.json({
-        "result" : {
-            "message" : "장바구니에 물품을 수정하였습니다."
-        }
-    });
+    if(req.secure) {
+        res.json({
+            "result" : {
+                "message" : "장바구니에 물품을 수정하였습니다."
+            }
+        });
+    } else {
+        var err = new Error("SSL/TLS Upgrade Required");
+        err.status = 426;
+        next(err);
+    }
 });
 
 module.exports = router;

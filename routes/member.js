@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
-router.post('/', function(req, res, next) {
+router.post('/login', function(req, res, next) {
     if(req.secure) {
         res.json({
             "result" : {
